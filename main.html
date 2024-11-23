@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EchoGestures</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+   
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="vts.html">Voice-Sign</a></li>
+                <li><a href="tts.html">Text-Sign</a></li>
+                <li><a href="lts.html">Letter-Sign</a></li>
+                <li><a href="/">Back to Main Page</a></li>
+            </ul>
+            <h1 class="logo">EchoGestures</h1>
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title">EchoGestures</h1>
+            <h4>From Audio To Action</h4>
+            <a href="vts.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About Us</p>
+                <h2>Bridging Silence with Signs of Innovation</h2>
+                <p>Welcome to EchoGestures, where we bridge communication barriers with innovation. We're passionate about creating accessible solutions that empower individuals to connect seamlessly through sign language...</p>
+            </div>
+            <div class="about-image">
+                <img src="bkg.jpg" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="contributors">
+        <!-- <h2 class="contributors-title">Contributors</h2> -->
+        <div class="contributors-container container">
+            <!-- Contributors list here -->
+        </div>
+    </section> -->
+
+    <footer id="footer">
+        <h2> EchoGestures 2024&copy; All rights reserved</h2>
+    </footer>
+
+    <!-- Chatbot Section -->
+    <button id="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+       
+    </button>
+
+    <div class="chatbot-popup">
+        <div class="chat-header">
+            <div class="header-info">
+                <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+                </svg>
+                <h2 class="logo-text">Chatbot</h2>
+            </div>
+            <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+        </div>
+
+        <div class="chat-body">
+            <div class="message bot-message">
+                <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9z"/>
+                </svg>
+                <p class="message-text">Hello! How can I assist you today?</p>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" placeholder="Type a message..." id="user-input">
+            <button id="send-message" class="material-symbols-rounded">send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+          // Chatbot Toggle Logic
+          const chatbotToggler = document.getElementById('chatbot-toggler');
+        const chatbotPopup = document.querySelector('.chatbot-popup');
+        const closeChatbot = document.getElementById('close-chatbot');
+        const sendMessageButton = document.getElementById('send-message');
+        const userInput = document.getElementById('user-input');
+
+        // Initialize chat history with a default bot message
+        const chatHistory = [{
+            role: "model",
+            parts: [{ text: "Hello! How can I assist you today?" }],
+        }];
+
+        chatbotToggler.addEventListener('click', () => {
+            chatbotPopup.classList.toggle('active');
+        });
+
+        closeChatbot.addEventListener('click', () => {
+            chatbotPopup.classList.remove('active');
+        });
+
+        sendMessageButton.addEventListener('click', () => {
+            const userMessage = userInput.value.trim();
+            if (userMessage) {
+                // Add user message to chat history
+                chatHistory.push({
+                    role: "user",
+                    parts: [{ text: userMessage }],
+                });
+
+                // Display user message in the chat
+                const userMessageContainer = document.createElement('div');
+                userMessageContainer.classList.add('message', 'user-message');
+                const userMessageText = document.createElement('div');
+                userMessageText.classList.add('message-text');
+                userMessageText.innerHTML = `<p>${userMessage}</p>`;
+                userMessageContainer.appendChild(userMessageText);
+                document.querySelector('.chat-body').appendChild(userMessageContainer);
+
+                userInput.value = '';
+
+                // Simulate bot response
+                setTimeout(() => {
+                    let botResponseText = "I'm here to assist you!";
+                    // Check if user asks for "Tell me more about EcoGesture"
+                    if (userMessage.toLowerCase().includes("tell me more about ecogesture")) {
+                        botResponseText = "EcoGesture is an innovative platform designed to bridge communication gaps by seamlessly converting different forms of communication into sign language. It integrates multiple technologies to support accessibility and enhance learning in the field of sign language.Text to Sign Language: EcoGesture efficiently translates written text into sign language gestures, making it easier for individuals who use sign language to understand and communicate with people who rely on written text.Voice to Text: The system also features a voice-to-text conversion, where spoken words are instantly transcribed into text, ensuring that individuals with hearing impairments can easily read and follow spoken conversations.Alphabet to Image: EcoGesture can translate individual letters or symbols into visual images of corresponding signs, making it an ideal tool for learning and practicing sign language alphabets.Sign Language Training: Whether you’re a beginner or looking to refine your skills, EcoGesture provides a dynamic and interactive way to learn and train in sign language. It offers real-time feedback, helping users improve their proficiency in communication through gestures.With EcoGesture, accessibility and communication barriers are significantly reduced, creating a more inclusive environment for individuals with different communication needs. ";
+                    }
+
+                    // Add bot response to chat history
+                    chatHistory.push({
+                        role: "model",
+                        parts: [{ text: botResponseText }],
+                    });
+
+                    // Display bot message in the chat
+                    const botMessageContainer = document.createElement('div');
+                    botMessageContainer.classList.add('message', 'bot-message');
+                    const botMessageText = document.createElement('div');
+                    botMessageText.classList.add('message-text');
+                    botMessageText.innerHTML = `<p>${botResponseText}</p>`;
+                    botMessageContainer.appendChild(botMessageText);
+                    document.querySelector('.chat-body').appendChild(botMessageContainer);
+                }, 1000);
+            }
+        });   </script>
+</body>
+</html>

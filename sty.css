@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    background: url(fsc.jpg);
+    background-position: center;}
+
+/* ######################## utility classes############################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 50px;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    margin-top: 1em;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary{
+    background-color: #4d8377;
+    color: #fff;
+    
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover{
+    background-color: #128068;
+}
+
+/* ############################### navbar styling ########################### */
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.logo{
+    font-size: 3rem;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 99;
+}
+
+/* ########################### showcase area ############################### */
+.showcase-area{
+    height: calc(100vh - 64px); /* Adjusted height to account for navbar */
+    background: linear-gradient(rgba(240,240,240,0.08),rgba(255,255,255,0.17)), url(fsc.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form{
+    background-color: rgba(255, 255, 255, 0.9); /* Added background color for form */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-form-panel{
+    margin-bottom: 2rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"]{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-form h2{
+    margin-bottom: 1em;
+}
+
+.auth-form p{
+    margin-top: 1em;
+}
+
+/* ############################# About Us ############################# */
+#footer h2{
+    font-size: 2rem;
+    color: #fff;
+    background: rgb(65,65,65);
+    font-weight: 500;
+    text-align: center;
+    padding: 2rem;
+}

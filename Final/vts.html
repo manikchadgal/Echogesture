@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text and Video Converter</title>
+    <link rel="stylesheet" href="vts.css">
+</head>
+<body>
+    <nav class="navbar container-nav">
+        <div class="navbar-container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vts.html">Voice-Sign</a></li>
+                <li><a href="tts.html">Text-Sign</a></li>
+                <li><a href="lts.html">Letter-Sign</a></li>
+            </ul>
+            <h1 class="logo">EG</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>EchoGesture</h1>
+        </div>
+        <div class="main-content">
+            <div class="dropdown-container">
+                <label for="conversion-type">Conversion Type: Voice To Sign Language</label>
+            </div>
+            <textarea id="converted_text" rows="6" placeholder="Converted text will appear here..." readonly></textarea>
+            <div class="button-container" >
+                <button id="click_to_record" onclick="toggleRecording()">Start Recording</button>
+                <button id="submit_text">Submit</button>
+            </div>
+            <div id="video_container">
+                <!-- <img id="image_display" src="logo.png" alt="Placeholder Image"> -->
+                <video id="video_display" controls autoplay>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EchoGesture. All rights reserved.</p>
+    </footer>
+
+<script src="vts.js"></script>
+
+</body>
+</html>
